@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: "Prompt", sans-serif;
+}
+
 body {
   background: #f8f8f8;
+}
+
+.animate-modal-appear {
+  animation: modal-appear 0.5s ease-in-out;
+}
+
+@keyframes modal-appear {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

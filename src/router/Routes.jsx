@@ -3,10 +3,15 @@ import { RouterProvider } from "react-router-dom";
 import Home from "../page/Home";
 import ProductDetail from "../page/ProductDetail";
 import Layout from "../layout/Layout";
+import { ModalContextProvider } from "../contexts/ModalContext";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <ModalContextProvider>
+        <Layout />
+      </ModalContextProvider>
+    ),
     children: [
       {
         path: "",
